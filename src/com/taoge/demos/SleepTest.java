@@ -16,7 +16,11 @@ public class SleepTest {
     public static void main(String[] args) {
         new Thread(() -> {
             Debug.debug("开始执行");
-            Sleep.seconds(5);
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             Debug.debug("执行结束");
         },"t1").start();
     }
