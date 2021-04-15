@@ -10,3 +10,4 @@ bootstrap-*.yml
 .DS_Store
 out/
 lombok.*
+production/**
